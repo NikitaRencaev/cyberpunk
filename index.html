@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en, ru">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
         <div class="header__content container">
             <div class="header__logo">
                 <a href="#header">
-                    <img src="./img/header/logo.png" alt="logo">
+                    <img src="./img/header/logo.png" alt="Логотип Cyberpunk 2077">
                 </a>
             </div>
 
@@ -34,7 +34,7 @@
                         <h1 class="hero-banner__title">
                             Доступно на всех платформах
                         </h1>
-                        <button class="btn">
+                        <button class="btn" type="button">
                             Узнать больше
                         </button>
                     </div>
@@ -84,9 +84,12 @@
                 </div>
 
                 <div class="game__form">
-                    <form action="">
-                        <input type="text" placeholder="Как тебя зовут?" class="nameInput">
-                        <input type="email" placeholder="Твой e-mail" class="emailInput">
+                    <form action="/submit" novalidate>
+                        <label for="name" class="form__label">Как тебя зовут?</label>
+                        <input type="text" id="name" class="form__input" required>
+
+                        <label for="email" class="form__label">Твой e-mail</label>
+                        <input type="email" id="email" class="form__input" required>
                         <label class="form-label__file">
                             <input type="file" accept=".png .jpg .pdf" style="display: none;">
                             <div class="form-label__info">
@@ -111,7 +114,7 @@
                         <source media="(min-width: 1024px)" srcset="./img/game/game-img.png" class="big-screen">
                         <source media="(min-width: 450px)" srcset="./img/game/game-img-small-screen.png" class="small-screen">
                         <source media="(max-width: 450px)" srcset="./img/game/game-img-mobile.png" class="mobile">
-                        <img src="./img/game/game-img.png" alt="ps5/xbox" class="game__img">
+                        <img src="./img/game/game-img.png" alt="Призы: Xbox Series X и PlayStation 5" class="game__img">
                     </picture>
                 </div>
             </div>
@@ -122,7 +125,7 @@
         <div class="container">
             <div class="monitor__content">
                 <div class="monitor__photos">
-                    <img src="./img/monitor/monitor-img.png" alt="monitor-img" class="monitor-img">
+                    <img src="./img/monitor/monitor-img.png" alt="monitor-img" class="monitor__img">
                     <div class="monitor-photos__logos">
                         <div>
                             <img src="./img/monitor/hp-logo.svg" alt="hp-logo" class="hp-logo">
@@ -152,7 +155,7 @@
                         <div class="monitor-movement">
                             <p>Быстрые движения и плавный геймплей</p>
                         </div>
-                        <button class="btn">
+                        <button class="btn" type="button">
                             Подробнее
                         </button>
                     </div>
@@ -168,11 +171,11 @@
                     <h2 class="buy__title">
                         Купить игру Cyberpunk 2077
                     </h2>
-                    <ul class="buy__set" style="list-style: none;">
-                        <li><h3>В комплект входит:</h3></li>
-                        <li><p class="disk">Футляр с игровыми дисками</p></li>
-                        <li><p class="pc">Футляр с кодом для загрузки игры и дисками (pc)</p></li>
-                        <li><p class="info">Справочник с информацией об игровом мире</p></li>
+                    <ul class="buy__set">
+                        <li class="buy__set-title">В комплект входит:</li>
+                        <li class="disk">Футляр с игровыми дисками</li>
+                        <li class="pc">Футляр с кодом для загрузки игры и дисками (pc)</li>
+                        <li class="info">Справочник с информацией об игровом мире</li>
                     </ul>
                     <ul class="buy__platform" style="list-style: none;">
                         <li><h3>Выберите платформу:</h3></li>
@@ -214,11 +217,11 @@
                 </div>
             </div>
         </div>
-    </footer>
 
-    <div class="basement">
-        <p>CD PROJEKT®, Cyberpunk®, Cyberpunk 2077®</p>
-    </div>
+        <div class="footer__copyright">
+            <p>CD PROJEKT®, Cyberpunk®, Cyberpunk 2077®</p>
+        </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/main.js"></script>
